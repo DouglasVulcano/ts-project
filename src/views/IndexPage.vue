@@ -1,15 +1,17 @@
 <template>
-  <pre> 
-    <h1>{{jobs}}</h1>
-</pre>
+    <list-component :jobs="jobs" />
 </template>
 
 <script lang="ts">
-import { defineComponent, ref } from "vue";
-import Job from '../types/Job';
+import { defineComponent, ref } from 'vue';
+import ListComponent from '@/components/ListComponent.vue';
+import Job from 'src/types/Job';
 
 export default defineComponent({
   name: "IndexPage",
+  components:{
+    ListComponent
+  },
   setup() {
     const jobs = ref<Job[]>([
       {
