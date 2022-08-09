@@ -17,6 +17,7 @@
 <script lang="ts">
 import { defineComponent, PropType } from "vue";
 import Job from "src/types/Job";
+import OrderTerm from "src/types/OrderTerm";
 
 export default defineComponent({
   name: "ListComponent",
@@ -24,6 +25,10 @@ export default defineComponent({
   props: {
     jobs: {
       type: Array as PropType<Job[]>, // Type as Array<Job> to can use :key on v-for's
+      required: true,
+    },
+    order: {
+      type: String as PropType<OrderTerm>,
       required: true,
     },
   },
