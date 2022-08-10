@@ -1,4 +1,6 @@
-# ts-project
+# Project Vue with TypeScript
+
+This is an example project of using Typescript with the Vue.js framework
 
 ## Project setup
 ```
